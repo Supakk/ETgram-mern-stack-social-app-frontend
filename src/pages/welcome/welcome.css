@@ -11,7 +11,7 @@
 
 .welcometext_first {
     margin-bottom: 20px;
-    color : #ff911c
+    color : #000000
 }
 
 .welcometext_second {
@@ -30,15 +30,20 @@
 
 .loginbutton{
     height: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
-    background-color: #ff911c;
+    background-color: #ffba6b;
     color: white;
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
     margin-bottom: 10px;
     width: 30%;
+}
+
+.loginbutton:hover{
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
 .login-button-container {
@@ -49,9 +54,9 @@
 
 .registerbutton {
     height: 50px;
-    border-radius: 10px;
+    border-radius: 30px;
     border: none;
-    background-color: #ff911c;
+    background-color: #ffba6b;
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -60,8 +65,18 @@
     width: 30%;
 }
 
+.registerbutton:hover{
+    box-shadow: 0 0 0 2px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
 .terms-text {
     margin-top: 20px;
     font-size: 12px;
     color: #888;
   }
+
+.logo-image {
+  width: 700px;
+  margin-bottom: 20px;
+}

@@ -10,13 +10,14 @@ export default function Welcome() {
         className="postPage"
         style={{ overflowY: "auto", maxHeight: "100vh" }}
       >
+        <img src="/assets/logo.png" alt="Logo" className="logo-image" />
         <FeedStart username={username} />
       </div>
       <div className="loginRegister">
         <div className="login-button-container">
-          <h1 className="welcometext_first">Welcome to ETGRAM</h1>
+          <h1 className="welcometext_first">Welcome to <span style={{ color: '#ff911c' }}>ETGRAM</span></h1>
           <h2 className="welcometext_second">
-            ETGRAM helps you connect and share with the people in your life
+            <span style={{ color: '#ff911c' }}>ETGRAM</span> helps you connect and share with the people in your life
           </h2>
         </div>
         <NavLink to="/login">
