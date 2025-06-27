@@ -5,6 +5,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
 import { CircularProgress } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function Login() {
   const emailRef = useRef();
@@ -30,26 +31,44 @@ export default function Login() {
   return (
     <div className="login">
       <div className="loginWrapper">
-        <div className="loginLeft">
+        <div className="loginHeader">
           <h3 className="loginLogo">ET-GRAM</h3>
           <span className="loginDesc">
             Social Network for KMITL-SIET.BTECH students
           </span>
-        </div>
-        <div className="loginRight">
+
           <form className="loginBox" onSubmit={handleClick}>
-            <input placeholder="Email" type= "email" required className="loginInput" ref={emailRef} />
-            <input placeholder="Password" type="password" required minLength="6" className="loginInput" ref={passwordRef} />
-            <button className="loginButton" type="submit" disabled = {isFetching}>
-              {isFetching ? <CircularProgress color = "white" size={"20px"}/> 
-              : "Log In"}
+            <input 
+              placeholder="Username" 
+              type="email" 
+              required 
+              className="loginInput" 
+              ref={emailRef} 
+            />
+            <input 
+              placeholder="Password" 
+              type="password" 
+              required 
+              minLength="6" 
+              className="loginInput" 
+              ref={passwordRef} 
+            />
+            <button className="loginButton" type="submit" disabled={isFetching}>
+              {isFetching ? (
+                <CircularProgress color="inherit" size={20} />
+              ) : (
+                "Log In"
+              )}
             </button>
             {error && <span className="loginError">{error}</span>}
-            <span className="loginForgot">Forgot Password?</span>
-            <button className="loginRegisterButton" onClick={handleRegister}>
-              {isFetching ? <CircularProgress color = "white" size={"20px"}/> 
-              : "Create a New Account"}
-            </button>
+            <div className="loginLinks">
+              <Link to="/forgot-password" className="loginForgot">
+                Forgot password?
+              </Link>
+              <Link to="/register" className="loginRegisterButton">
+                Create a New Account
+              </Link>
+            </div>
           </form>
         </div>
       </div>

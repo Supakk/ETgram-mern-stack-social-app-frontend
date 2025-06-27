@@ -29,6 +29,9 @@
 
 
 .loginbutton{
+    display: "flex";
+    align-Items: "center";
+    justify-content: center;
     height: 50px;
     border-radius: 30px;
     border: none;
@@ -42,8 +45,9 @@
 }
 
 .loginbutton:hover{
-    box-shadow: 0 0 0 2px rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
+    background-color: #ff911c;
+    box-shadow: 0 0 0 2px rgb(255, 171, 76);
+    color: rgb(254, 254, 254);
 }
 
 .login-button-container {
@@ -52,23 +56,6 @@
     justify-content: space-between;
 }
 
-.registerbutton {
-    height: 50px;
-    border-radius: 30px;
-    border: none;
-    background-color: #ffba6b;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-bottom: 10px;
-    width: 30%;
-}
-
-.registerbutton:hover{
-    box-shadow: 0 0 0 2px rgb(0, 0, 0);
-    color: rgb(0, 0, 0);
-}
 
 .terms-text {
     margin-top: 20px;

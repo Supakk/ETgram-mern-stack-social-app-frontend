@@ -1,125 +1,210 @@
-.login {
-  width: 100vw;
-  height: 100vh;
+.register {
+  min-height: 100vh;
   background-color: #f0f2f5;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.loginWrapper {
-  width: 70%;
-  height: 70%;
-  display: flex;
+.registerWrapper {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.loginLeft,
-.loginRight {
-  flex: 1;
+.registerHeader {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.registerLogo {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ff911c;
+  margin: 0 0 8px 0;
+}
+
+.registerDesc {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.RegisterBox {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
 }
 
-.loginLogo {
-  font-size: 50px;
-  font-weight: 800;
-  color: #f17d00;
-  margin-bottom: 10px;
-}
-
-.loginDesc {
-  font-size: 24px;
-}
-
-.RegisterBox{
-    height: 700px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.RegisterInput{
-    height: 50px;
-    border-radius: 10px;
-    border: 1px solid gray;
-    font-size: 18px;
-    padding-left: 20px;
-}
-
-.RegisterInputs{
+.RegisterInput {
   height: 50px;
   border-radius: 10px;
-  border: 1px solid gray;
-  font-size: 18px;
-  padding-left: 20px;
-  width: 45%;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  padding: 0 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.Inputmonth{
+.RegisterInput:focus {
+  border-color: #f17d00;
+}
+
+.RegisterInput.error {
+  border-color: #ff4444;
+}
+
+.RegisterInputs {
   height: 50px;
   border-radius: 10px;
-  border: 1px solid gray;
-  font-size: 18px;
-  padding-left: 20px;
-  width: 40%;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  padding: 0 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  width: 100%;
 }
 
-.InputDY{
-  height: 50px;
-  border-radius: 10px;
-  border: 1px solid gray;
-  font-size: 18px;
-  padding-left: 20px;
-  width: 25%;
+.RegisterInputs:focus {
+  border-color: #f17d00;
 }
 
-.inputWrapper
-{
+.inputWrapper {
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
 }
 
-.RegisterInput:focus{
-    outline: none;
+.inputWrapper .RegisterInputs {
+  flex: 1;
+  min-width: 0;
 }
 
-.RegisterInputs:focus{
+.dateLabel {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0 -8px 0;
+  font-weight: 500;
+}
+
+.Inputmonth {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  padding: 0 12px;
   outline: none;
+  background-color: white;
+  color: #666;
+  box-sizing: border-box;
+  cursor: pointer;
+  flex: 2;
+  min-width: 0;
 }
 
-.Inputmonth, .InputDY:focus{
+.InputDY {
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  padding: 0 12px;
   outline: none;
+  background-color: white;
+  color: #666;
+  box-sizing: border-box;
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
 }
 
-.loginButton{
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #f17d00;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
+.Inputmonth:focus,
+.InputDY:focus {
+  border-color: #f17d00;
 }
 
-.registerForgot{
-    text-align: center;
-    color: #f17d00;
+.registerButton {
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffba6b;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-.loginRegisterButton{
-    width: 60%;
-    align-self: center;
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #42b72a;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
+.registerButton:hover {
+  background-color: #ff911c;
+}
+
+.backToLogin {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.registerBackButton {
+  background: none;
+  border: none;
+  color: #f17d00;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.registerBackButton:hover {
+  text-decoration: underline;
+}
+
+.errorMessage {
+  color: #ff4444;
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: 4px;
+}
+
+.generalError {
+  color: #ff4444;
+  font-size: 14px;
+  text-align: center;
+  background-color: #fff5f5;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ffebee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .registerWrapper {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .inputWrapper {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .inputWrapper .RegisterInputs {
+    flex: none;
+  }
+  
+  .Inputmonth,
+  .InputDY {
+    flex: none;
+  }
 }

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./welcome.css";
 import FeedStart from "../../components/feedforstart/FeedStart";
+import { MdEmail } from "react-icons/md";
 
 export default function Welcome() {
   const username = "mrare123";
@@ -21,10 +22,9 @@ export default function Welcome() {
           </h2>
         </div>
         <NavLink to="/login">
-          <button className="loginbutton">Login</button>
-        </NavLink>
-        <NavLink to="/register">
-          <button className="registerbutton">Register</button>
+          <button className="loginbutton"> 
+            Sign up with email <MdEmail style={{ marginLeft: "8px", verticalAlign: "middle"}} />
+          </button>
         </NavLink>
         <p className="terms-text">By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
       </div>
