@@ -19,6 +19,10 @@ export default function Register() {
 
   const [errors, setErrors] = useState({});
 
+  const handleBack = () => {
+    navigate("/login");
+  };
+
   const handleClick = async (e) => {
     e.preventDefault();
     
@@ -45,11 +49,7 @@ export default function Register() {
         console.log(err);
         setErrors({general: "Registration failed. Please try again."});
       }
-    }
-  }
-
-  const handleLoginRedirect = () => {
-    navigate("/login");
+    };
   }
 
   return (
@@ -165,9 +165,9 @@ export default function Register() {
           <button className="registerButton" type="submit">Next</button>
           
           <div className="backToLogin">
-            <Link to="/login" className="registerBackButton">
+            <button onClick={handleBack} className="registerBackButton">
               Back to log in
-            </Link>
+            </button>
           </div>
         </form>
       </div>
